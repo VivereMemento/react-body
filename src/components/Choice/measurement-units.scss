@@ -1,0 +1,23 @@
+.measurement-units {
+	width: 100%;
+	max-width: 210px;
+	margin-bottom: 15px;
+	border-radius: 50px;
+	overflow: hidden;
+
+	&__btn {
+		width: 50%;
+		padding: 5px;
+		color: inherit;
+		background: #fff;
+		border: none;
+		cursor: pointer;
+		outline: none;
+		transition: .3s;
+
+		&.active {
+			color: #cb4ca0;
+			background: linear-gradient(to left,rgba(232,143,193,.2),rgba(184,113,217,.2));
+		}
+	}
+}

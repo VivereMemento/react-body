@@ -1,0 +1,21 @@
+.check-green {
+	
+	& {
+		.st0 {
+			fill:none;
+			stroke:#45ceaa;
+			stroke-width:2;
+			stroke-linecap:round;
+			stroke-miterlimit:10
+		}
+	}
+}
+
+.check-pink {
+
+	& {
+		.st0 {
+			fill:#c962aa
+		}
+	}
+}

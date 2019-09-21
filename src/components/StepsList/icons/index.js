@@ -1,0 +1,10 @@
+import './gender.svg';
+import './day.svg';
+import './fitness.svg';
+import './water.svg';
+import './sleep.svg';
+import './measures.svg';
+import './veggie.svg';
+import './products.svg';
+import './meat.svg';
+import './arrow-bottom.svg';

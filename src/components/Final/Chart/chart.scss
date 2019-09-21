@@ -1,0 +1,33 @@
+@import '../../../style/_misc/mixins';
+@import '../../../style/_misc/vars';
+
+.chart {
+	margin-bottom: 25px;
+
+	&__inner { 
+		height: 100%;
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 30px;
+		text-align: center;
+		background: #fff;
+		border-radius: 15px;
+		box-shadow: 0 0 14px 0 rgba(0,0,0,.1);
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: 5px;
+		padding: 0 40px;
+		font: 30px $main-font-regular;
+
+		&_colored {
+			font: 54px $main-font-bold;
+			color: #9c27af;
+		}
+
+		&_bold {
+			font-family: $main-font-bold;
+		}
+	}
+}

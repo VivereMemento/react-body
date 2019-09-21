@@ -1,0 +1,708 @@
+extends ../base
+block title
+	| Start Quiz - Bodyfit
+block content
+	//- RECIPES
+	//- PAGE 1
+	.page
+		.page__bg-wrap
+			img.page__bg-img(src='./images/bg-cut.jpg' alt='' role='presentational')
+			h1.page__main-title PERSONALIZED 
+				p.page__main-title--bold RECIPES
+			p.page__mail for example@gmail.com
+
+			.goal-block
+				h2.goal-block__title goal
+				.goal-block__img-wrap
+					img.goal-block__img(src='./images/line-with-points.png' alt="" role="presentation")
+				.goal-block__text-wrap
+					span.goal-block__text 94 KG
+					span.goal-block__text 85 KG
+			.content-block
+				figure.content-block__wrap
+					.content-block__img-wrap
+						.icon
+							p.icon__content 74
+					figcaption.content-block__text recipes
+				figure.content-block__wrap
+					.content-block__img-wrap
+						img.content-block__img(src='./images/diagram.png')
+					figcaption.content-block__text macro<br>split
+				figure.content-block__wrap
+					.content-block__img-wrap
+						img.content-block__img(src='./images/fire.png')
+					figcaption.content-block__text calorie<br>control
+			.logo
+				img(src='./images/logo.png')
+
+	//- PAGE 2
+	.page
+		.page__common-wrap
+			p.page__text We calculated the meal plan according to your dimensions, body profile and preferences. Certified nutritionists composed each dish and approved the algorithm of their size, order and nutritional value suggestion. In order to benefit from a well-balanced diet properly, please carefully check our instruсtions and tips below.
+			h2.page__title recipes
+			p.page__text Each dish contains information about its preparation and value:
+			ul.page__list
+				li.page__list-item.page__list-item--with-point Preparation time
+				li.page__list-item.page__list-item--with-point Nutritional value
+				li.page__list-item.page__list-item--with-point Step-by-step preparation
+				li.page__list-item.page__list-item--with-point Ingredients
+				li.page__list-item.page__list-item--with-point Calories
+			h2.page__title ingredients
+			p.page__text Ingredients are split into ‘Essential ingredients’ and ‘Ingredients to you taste’.	
+			.page__flex-box
+				.page__flex-box-item
+					h3.page__flex-box-title Essential ingredients
+					p.page__text Essential ingredients are those that you have chosen during the quiz. They play a key role in the meal preparation and should not be ignored or replaced.
+				.page__flex-box-item
+					h3.page__flex-box-title Ingredients to your taste
+					p.page__text Ingredients to your taste are strongly recommended to consume. We have suggested them for your body profile to keep the well-balanced meal plan. However, you may replace them with similar ingredients if you dislike or have intolerance to.
+			p.page__text The nutritional value of a dish is a summarized value of both Essential ingredients and Ingredients to your taste
+			h2.page__title Dish substitution
+			p.page__text In order to achieve the best possible results, we strongly recommend following the meal plan with maximum accuracy. However, if you struggle to cook or absolutely dislike a particular dish, you may replace it with another dish from the same column.
+
+	//- PAGE 3
+	.page.page--gradient
+		.page__table-wrap
+			div.super-table
+
+				-
+					var rows = [
+						{
+							name: 'Almond',
+							values: ['17 g / 0.6 oz', '-', '160 g / 5.6 oz', '80 g / 2.8 oz']
+						},
+						{
+							name: 'Basil (dried)',
+							values: ['11 g / 0.4 oz', '2 g / 0.1 oz', '-', '-']
+						},
+						{
+							name: 'Beans',
+							values: ['-', '-', '220 g / 7.8 oz', '110 g / 3.9 oz']
+						},
+						{
+							name: 'Blackberry',
+							values: ['-', '-', '200 g / 7.1 oz', '100 g / 3.5 oz']
+						},
+						{
+							name: 'Blueberry',
+							values: ['-', '-', '200 g / 7.1 oz', '100 g / 3.5 oz']
+						},
+						{
+							name: 'Breadcrumbs',
+							values: ['20 g / 0.7 oz', '5 g / 0.2 oz', '130 g / 4.6 oz', '65 g / 2.3 oz']
+						},
+						{
+							name: 'Cashew',
+							values: ['-', '-', '150 g / 5.3 oz', '75 g / 2.6 oz ']
+						},
+						{
+							name: 'Cheese (grated)',
+							values: ['15 g / 0.7 oz', '6 g / 0.2 oz', '-', '-']
+						},
+						{
+							name: 'Chickpeas',
+							values: ['20 g / 0.7 oz', '5 g / 0.2 oz', '230 g / 8.1 oz', '115 g / 4.1 oz']
+						},
+						{
+							name: 'Chopped coriander',
+							values: ['14 g / 0.5 oz', '5 g / 0.2 oz', '-', '-']
+						},
+						{
+							name: 'Cinnamon',
+							values: ['20 g / 0.7 oz', '8 g / 0.3 oz', '-', '-']
+						},
+						{
+							name: 'Cottage cheese',
+							values: ['20 g / 0.7 oz', '7 g / 0.3 oz', '-', '-']
+						},
+						{
+							name: 'Couscous',
+							values: ['-', '-', '145 g / 5.1 oz', '70 g / 2.5 oz']
+						},
+						{
+							name: 'Cream',
+							values: ['14 g / 0.5 oz', '5 g / 0.2 oz', '250 g / 8.8 oz', '125 g / 4.4 oz']
+						},
+						{
+							name: 'Cumin',
+							values: ['20 g / 0.7 oz', '8 g / 0.3 oz', '-', '-']
+						},{
+							name: 'Flour',
+							values: ['25 g / 0.9 oz', '7 g / 0.3 oz', '160 g / 5.6 oz', '80 g / 2.8 oz']
+						},
+						{
+							name: 'Garlic (powder)',
+							values: ['12 g / 0.4 oz', '3 g / 0.1 oz', '-', '-']
+						},
+						{
+							name: 'Ginger (grated)',
+							values: ['20 g / 0.7 oz', '6 g / 0.2 oz', '-', '-']
+						},{
+							name: 'Hazelnuts',
+							values: ['10 g / 0.4 oz', '-', '170 g / 6 oz', '85 g / 3 oz']
+						},
+						{
+							name: 'Honey',
+							values: ['17 g / 0.6 oz', '8 g / 0.3 oz', '325 g / 11.5 oz', '160 g / 5.6 oz']
+						},
+						{
+							name: 'Jam',
+							values: ['40 g / 1.4 oz', '15 g / 0.5 oz', '325 g / 11.5 oz', '160 g / 5.6 oz']
+						},
+						{
+							name: 'Lemon zest',
+							values: ['6 g / 0.2 oz', '2 g / 0.1 oz', '-', '-']
+						},
+						{
+							name: 'Lentils',
+							values: ['25 g / 0.9 oz', '6 g / 0.2 oz', '210 g / 7.4 oz', '105 g / 3.7 oz']
+						},
+						{
+							name: 'Milk',
+							values: ['20 g / 0.7 oz', '5 g / 0.2 oz', '250 g / 8.8 oz', '125 g / 4.4 oz']
+						},
+						{
+							name: 'Oil',
+							values: ['10 g / 0.4 oz', '5 g / 0.2 oz', '-', '-']
+						},
+					];
+
+				each row in rows
+					div.super-table__row
+						span.super-table__cell= row.name
+						span.super-table__cell= row.values[0]
+						span.super-table__cell= row.values[1]
+						span.super-table__cell= row.values[2]
+						span.super-table__cell= row.values[3]
+					
+				div.super-table__column.super-table__column
+					img.super-table__img(src='./images/spoon1.png')
+					p.super-table__head 1 tpsp
+				div.super-table__column.super-table__column--green
+					img.super-table__img(src='./images/spoon-gr.png')
+					p.super-table__head 1 tsp
+				div.super-table__column.super-table__column--yellow
+					img.super-table__img(src='./images/cup-yel.png')
+					p.super-table__head 1 cup
+				div.super-table__column.super-table__column--pink
+					img.super-table__img(src='./images/cup-pink.png')
+					p.super-table__head 1/2 cup
+	
+	//- PAGE 4
+	.page.page--gradient
+		.page__table-wrap--smaller
+			div.super-table
+
+				-
+					var rows = [
+						{
+							name: 'Oregano',
+							values: ['13 g / 0.5 oz', '3 g / 0.1 oz', '	&#8212;', '	&#8212;']
+						},
+						{
+							name: 'Parsley',
+							values: ['15 g / 0.5 oz', '4 g / 0.1 oz', '	&#8212;', '	&#8212;']
+						},
+						{
+							name: 'Peanut',
+							values: ['23 g / 0.8 oz', '8 g / 0.3 oz', '125 g / 4.4 oz', '60 g / 2.1 oz']
+						},
+						{
+							name: 'Peas',
+							values: ['	&#8212;', '	&#8212;', '230 g / 8.1 oz', '115 g / 4.1 oz']
+						},
+						{
+							name: 'Pine nuts',
+							values: ['10 g / 0.4 oz', '4 g / 0.1 oz', '140 g / 4.9 oz', '70 g / 2.5 oz']
+						},
+						{
+							name: 'Quinoa',
+							values: ['25 g / 0.9 oz', '7 g / 0.3 oz', '	&#8212;', '	&#8212;']
+						},
+						{
+							name: 'Raisins',
+							values: ['15 g / 0.5 oz', '6 g / 0.2 oz', '190 g / 6.7 oz', '95 g / 3.4 oz']
+						},
+						{
+							name: 'Raspberry',
+							values: ['	&#8212;', '	&#8212;', '180 g / 6.3 oz', '90 g / 3.2 oz']
+						},
+						{
+							name: 'Rice',
+							values: ['22 g / 0.8 oz', '7 g / 0.3 oz', '180 g / 6.3 oz', '90 g / 3.2 oz']
+						},
+						{
+							name: 'Rolled oats',
+							values: ['18 g / 0.6 oz', '5 g / 0.2 oz', '170 g / 6 oz', '85 g / 3 oz']
+						},
+						{
+							name: 'Salt',
+							values: ['20 g / 0.7 oz', '7 g / 0.3 oz', '300 g / 10.6 oz', '150 g / 5.3 oz']
+						},
+						{
+							name: 'Sauce (mustard, ketchup etc)',
+							values: ['15 g / 0.5 oz', '5 g / 0.2 oz', '250 g / 8.8 oz', '125 g / 4.4 oz']
+						},
+						{
+							name: 'Seeds (chia etc)',
+							values: ['14 g / 0.5 oz', '4 g / 0.1 oz', '	&#8212;', '	&#8212;']
+						},
+						{
+							name: 'Strawberry',
+							values: ['	&#8212;', '	&#8212;', '150 g / 5.3 oz', '75 g / 2.6 oz']
+						},
+						{
+							name: 'Sugar',
+							values: ['12 g / 0.4 oz', '6 g / 0.2 oz', '200 g / 7.1 oz', '100 g / 3.5 oz']
+						},
+						{
+							name: 'Vinegar',
+							values: ['15 g / 0.5 oz', '5 g / 0.2 oz', '250 g / 8.8 oz', '125 g / 4.4 oz']
+						},
+						{
+							name: 'Walnuts',
+							values: ['&#8212;', '&#8212;', '150 g / 5.3 oz', '75 g / 2.6 oz']
+						},
+						{
+							name: 'Yogurt',
+							values: ['15 g / 0.5 oz', '5 g / 0.2 oz', '260 g / 9.2 oz', '130 g / 4.6 oz']
+						},
+					];
+
+				each row in rows
+					div.super-table__row
+						span.super-table__cell= row.name
+						span.super-table__cell= row.values[0]
+						span.super-table__cell= row.values[1]
+						span.super-table__cell= row.values[2]
+						span.super-table__cell= row.values[3]
+					
+				div.super-table__column.super-table__column
+					p.super-table__head.super-table__head--with-padding 1 tpsp
+				div.super-table__column.super-table__column--green
+					p.super-table__head.super-table__head--with-padding 1 tsp
+				div.super-table__column.super-table__column--yellow
+					p.super-table__head.super-table__head--with-padding 1 cup
+				div.super-table__column.super-table__column--pink
+					p.super-table__head.super-table__head--with-padding 1/2 cup
+
+	//- PAGE 5
+	.page
+		img.page__img(src='./images/bg-small.jpg')
+		.recipe-block
+			h2.recipe-block__title spicy italian pork
+			.recipe-block__table
+				.table
+					h2.table__title Ingredients
+					.table__content
+						ul.table__heading
+							li.table__heading-item
+							li.table__heading-item Week 1-2
+							li.table__heading-item Week 3-4
+							li.table__heading-item Week 3-4
+							li.table__heading-item Week 3-4
+							li.table__heading-item Week 3-4
+							li.table__heading-item Week 3-4
+						div
+							ul.table__row
+								li.table__row-item Pork chops pork chops
+								li.table__row-item 200 g
+								li.table__row-item 170 g
+								li.table__row-item 170 g
+								li.table__row-item 170 g
+								li.table__row-item 170 g
+								li.table__row-item 170 g
+								
+							ul.table__row
+								li.table__row-item Olive oilli
+								li.table__row-item 20 g
+								li.table__row-item 20 g
+								li.table__row-item 20 g
+								li.table__row-item 20 g
+								li.table__row-item 20 g
+								li.table__row-item 20 g
+							ul.table__row
+								li.table__row-item Garlic
+								li.table__row-item 10 g
+								li.table__row-item 10 g
+								li.table__row-item 20 g
+								li.table__row-item 20 g
+								li.table__row-item 20 g
+								li.table__row-item 20 g
+			//SECOND TABLE
+			.recipe-block__table
+				.table
+					h2.table__title Macros
+					.table__content
+						ul.table__heading
+							li.table__heading-item
+							li.table__heading-item Week 1-2
+							li.table__heading-item Week 3-4
+							li.table__heading-item Week 3-4
+							li.table__heading-item Week 3-4
+							li.table__heading-item Week 3-4
+							li.table__heading-item Week 3-4
+						div
+							ul.table__row
+								li.table__row-item.table__row-item--green Proteins
+								li.table__row-item.table__row-item--green 60 g
+								li.table__row-item.table__row-item--green 170 g
+								li.table__row-item.table__row-item--green 170 g
+								li.table__row-item.table__row-item--green 170 g
+								li.table__row-item.table__row-item--green 170 g
+								li.table__row-item.table__row-item--green 170 g
+							ul.table__row
+								li.table__row-item.table__row-item--pink Carbs
+								li.table__row-item.table__row-item--pink
+								li.table__row-item.table__row-item--pink
+								li.table__row-item.table__row-item--pink
+								li.table__row-item.table__row-item--pink
+								li.table__row-item.table__row-item--pink
+								li.table__row-item.table__row-item--pink
+							ul.table__row
+								li.table__row-item.table__row-item--orange Fats
+								li.table__row-item.table__row-item--orange
+								li.table__row-item.table__row-item--orange
+								li.table__row-item.table__row-item--orange
+								li.table__row-item.table__row-item--orange
+								li.table__row-item.table__row-item--orange
+								li.table__row-item.table__row-item--orange
+			.recipe-block__table
+				.table__content
+					ul.table__results
+						li.table__results-item Calories
+						li.table__results-item 480
+						li.table__results-item 430
+						li.table__results-item 480
+						li.table__results-item 430
+						li.table__results-item 480
+						li.table__results-item 430
+				
+			h3.recipe-block__subtitle Preparations
+			-
+				var items = ['Heat olive oil in a skillet over medium-high heat.', 'Season the pork chops with salt and pepper, and quickly sear on both sides.', 'Remove from heat, and set aside. Heat the remaining olive oil in the skillet over medium-high heat, and saute the garlic about 30 seconds.', 'Mix in the tomato, chicken broth, parsley, and red pepper flakes.', 'Cook and stir until thickened, about 2 minutes. Return the pork chops to the skillet, and continue cooking 5 to 10 minutes.','Serve pork with the tomato and broth mixture from the skillet.'];
+
+			ul.recipe-block__recipe
+				each item, index in items
+					li.recipe-block__recipe-item= index+1 + '. ' + item
+			p.page__label *Customized recipe for: example@gmail.com
+
+			//- SCHEDULE
+			//- PAGE 1 SCHEDULE
+	.page
+		.page__bg-wrap
+			img.page__bg-img(src='./images/bg3-cut.jpg' alt='' role='presentational')
+			h1.page__main-title PERSONALIZED 
+				p.page__main-title--bold SCHEDULE
+			p.page__mail for example@gmail.com
+			img.page__img--pad(src='./images/calendar.png' alt='calendar')
+			.logo
+				img(src='./images/logo.png')
+
+			//- PAGE 2 SCHEDULE
+	.page
+		.page__common-wrap
+			p.page__text We calculated the meal plan according to your dimensions, body profile and preferences. Certified nutritionists composed each dish and approved the algorithm of their size, order and nutritional value suggestion. In order to benefit from a well-balanced diet properly, please carefully check our instruсtions and tips below.
+			p.page__text Each day consists of 5 meals:
+			ul.page__list.page__list--spaced
+				li.page__list-item
+					figure.page__list-figure
+						img(src="./images/breakfast.png", alt="breakfast")
+						figcaption Breakfast
+				li.page__list-item
+					figure.page__list-figure
+						img(src="./images/snack1.png", alt="breakfast")
+						figcaption 1
+							sup st 
+							|  snack
+				li.page__list-item
+					figure.page__list-figure
+						img(src="./images/lunch.png", alt="breakfast")
+						figcaption 
+							p Lunch
+							p (main + side dish)
+				li.page__list-item
+					figure.page__list-figure
+						img(src="./images/snack2.png", alt="breakfast")
+						figcaption 2
+							sup nd
+							|  snack
+				li.page__list-item
+					figure.page__list-figure
+						img(src="./images/dinner.png", alt="breakfast")
+						figcaption
+							p Dinner
+							p (main + side dish)
+			p.page__text
+				span.page__text--bold Note: 
+				|lunch and dinner meals have 2 dishes within. The main and side dishes are supposed to be consumed together.
+
+		//- PAGE 3 SCHEDULE
+	.page
+		.page__common-wrap
+			h2.page__title.page__title--big tips for best results
+			ul.tips-list
+				li.tips-list__item
+					.tips-list__title-wrap
+						.tips-list__img-wrap
+							img(src="./images/icon-glass.png", alt="glass")
+						span.tips-list__item-title Drinks
+					p.page__text We recommend drinking a glass of warm lemon water just after waking up. This will help boost your metabolism. Consume your daily water norm evenly. Note that other beverages such as tea, coffee or juice are not counted as water.
+				li.tips-list__item
+					.tips-list__title-wrap
+						.tips-list__img-wrap
+							img(src="./images/icon-body.png", alt="body")
+						span.tips-list__item-title Physical activity
+					p.page__text Any meal program becomes more efficient when combined with fitness, running or at least regular walking. We provide an individual list of home exercises to boost your metabolism. These exercises are essential for weight loss and should be done on a regular basis, at least 5 times a week to achieve your goals.
+				li.tips-list__item
+					.tips-list__title-wrap
+						.tips-list__img-wrap
+							img(src="./images/icon-sleep.png", alt="pillow")
+						span.tips-list__item-title Sleep
+					p.page__text We strongly recommend falling asleep before 11 pm. You should sleep at least 7 hours to recover physically and mentally. This will reduce the stress you feel and infuse power to your body.
+				li.tips-list__item
+					.tips-list__title-wrap
+						.tips-list__img-wrap
+							img(src="./images/icon-clock.png", alt="clock")
+						span.tips-list__item-title Meals frequency
+					p.page__text You should not feel a hunger, but also eating too often may be harmful for the program. That’s why we recommend eating every 2-3 hours.
+				li.tips-list__item
+					.tips-list__title-wrap
+						.tips-list__img-wrap
+							img(src="./images/icon-alerg.png", alt="alergia")
+						span.tips-list__item-title Allergies
+					p.page__text If you have any medical restrictions or allergies to the ingredients in your meal plan, please contact us. Our team will provide you with a safe substitute.
+				li.tips-list__item
+					.tips-list__title-wrap
+						.tips-list__img-wrap
+							img(src="./images/icon-vine.png", alt="glass og vine")
+						span.tips-list__item-title Alcohol
+					p.page__text You should abstain from alcohol when following the plan. If you are in a situation you cannot refuse an offer to drink, please limit yourself with a glass of red wine.
+
+		//- PAGE 4 SCHEDULE
+	.page
+		.page__schedule-wrap
+			h2.page__title.page__title--large Schedule for
+				p week 1
+			.schedule
+				.schedule__head
+					ul.schedule__head-list
+						li.schedule__head-item 
+						li.schedule__head-item Breakfast
+						li.schedule__head-item 1
+							sup st  
+							| &nbsp;snack
+						li.schedule__head-item.schedule__head-item--pseudo-left(data-name='Lunch') Main dish
+						li.schedule__head-item.schedule__head Side dish
+						li.schedule__head-item 2
+							sup nd  
+							| &nbsp;snack
+						li.schedule__head-item.schedule__head-item--pseudo-left(data-name='Dinner') Main dish
+						li.schedule__head-item Side dish
+				.schedule__body
+					ul.schedule__left-column
+						li.schedule__left-column-item Day 1
+						li.schedule__left-column-item Day 2
+						li.schedule__left-column-item Day 3
+						li.schedule__left-column-item Day 4
+						li.schedule__left-column-item Day 5
+						li.schedule__left-column-item Day 6
+						li.schedule__left-column-item Day 7
+					ul.schedule__content-list
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+						li.schedule__content-item 
+							figure.schedule__content-item-wrap
+								img.schedule__content-item-img(src='./images/dish.png' alt="dish")
+								figcaption.schedule__content-item-text dish name
+

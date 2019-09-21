@@ -1,0 +1,105 @@
+@import '../../style/_misc/vars';
+@import '../../style/_misc/mixins';
+ 
+@include pulseAnimation(man-pulse, 10px, 20px, $manColor);
+@include pulseAnimation(man-pulse-small, 5px, 10px, $manColor);
+@include pulseAnimation(woman-pulse, 10px, 20px, $womanColor);
+@include pulseAnimation(woman-pulse-small, 5px, 10px, $womanColor);
+
+.choice {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+	@include phones {
+		padding-top: 15px;
+		margin-bottom: 50px;
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 70%;
+		max-width: 340px;
+
+		@include phones {
+			width: 100%;
+		}
+	}
+
+	&__gender-btn {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 130px;
+		height: 130px;
+		text-decoration: none;
+		border-radius: 50%;
+		position: relative;
+		cursor: pointer;
+
+		&:before,
+		&:after {
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			position: absolute;
+			
+		}
+
+		&:hover {
+
+			& > svg {
+				opacity: 1;
+			}
+		}
+
+		&--man {
+			background: linear-gradient(to top,#67b2ac,#aad6d4);
+
+			&:before,
+			&:after {
+				box-shadow: 0 0 0 10px $manColor;
+				animation: man-pulse 2s infinite linear;
+			}
+
+			&::before {
+				animation: man-pulse-small 2s infinite linear;
+			}
+		}
+
+		&--woman {
+			background: linear-gradient(to top,#944198,#d03d98);
+
+			&:before,
+			&:after {
+				box-shadow: 0 0 0 10px $womanColor;
+				animation: woman-pulse 2s infinite linear;
+			}
+
+			&::before {
+				animation: woman-pulse-small 2s infinite linear;
+			}
+		}
+
+		&-svg {
+			width: 80%;
+			height: 60%;
+			fill: white;
+			opacity: 0.8;
+			transition: .3s;
+		}
+
+		&-text {
+			margin-top: 5px;
+			color: white;
+			text-transform: capitalize;
+		}
+	}
+}

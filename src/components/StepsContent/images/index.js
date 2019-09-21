@@ -1,0 +1,16 @@
+import './woman-vegetables.svg';
+import './woman-vegetables-bg.svg';
+import './woman-day-bg.svg';
+import './woman-day.svg';
+import './woman-fitness-bg.svg';
+import './woman-fitness.svg';
+import './woman-measurements-bg.svg';
+import './woman-measurements.svg';
+import './woman-meat-bg.svg';
+import './woman-meat.svg';
+import './woman-products-bg.svg';
+import './woman-products.svg';
+import './woman-sleep-bg.svg';
+import './woman-sleep.svg';
+import './woman-water-bg.svg';
+import './woman-water.svg';

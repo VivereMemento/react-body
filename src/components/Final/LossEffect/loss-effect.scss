@@ -1,0 +1,93 @@
+@import '../../../style/_misc/vars';
+@import '../../../style/_misc/mixins';
+
+.loss-effect {
+
+	&__item {
+		margin-bottom: 20px;
+		padding: 20px 0;
+		background: #fff;
+
+		&_without-bg {
+			padding: 0;
+			background: none;
+		}
+
+		&-part {
+			width: 48%;
+
+			@include phones {
+				width: 100%;
+			}
+		}
+
+		&-text {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			font: 22px/ 24px $main-font-medium;
+			text-align: justify;
+
+			&_pink {
+				color: $accent;
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+
+		&_with-bg {
+			padding: 20px 30px;
+			background: #fff;
+			border-radius: 15px;
+
+			& .loss-effect__item-text {
+				@include phones {
+					padding-bottom: 10px;
+				}
+			}
+		}
+
+		@include phones {
+			display: block;
+		}
+	}
+
+	&__img-wrap {
+		display: flex;
+		align-items: center;
+		height: 100%;
+
+		@include phones {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__img {
+		display: block;
+	}
+
+	&__list {
+
+		&-item {
+				display: flex;
+				align-items: center;
+				margin: 0;
+				margin-bottom: 10px;
+				padding: 0;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				&-svg {
+					width: 30px;
+					height: 30px;
+					margin-right: 5px;
+				}
+			}
+	}
+}

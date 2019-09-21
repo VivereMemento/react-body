@@ -1,0 +1,15 @@
+@import '../../style/_misc/mixins';
+
+.confirm-email {
+	display: flex;
+	justify-content: center;
+	
+	&__inner {
+		width: 550px;
+		text-align: center;
+
+		@include phones {
+			width: 100%;
+		}
+	}
+}

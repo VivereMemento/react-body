@@ -1,0 +1,134 @@
+@import '../../style/_misc/vars';
+.select {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 15px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	&__item {
+		width: 100%;
+		margin-bottom: 10px;
+		padding: 10px;
+		text-align: center;
+		background: #fff;
+		border-radius: 8px;
+		box-shadow: 0 0 14px 0 rgba(0,0,0,.1);
+		cursor: pointer;
+		position: relative;
+
+		&:hover {
+			background: #fafafa;
+			box-shadow: 0 4px 25px 0 rgba(0,0,0,.25);
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			width: 5px;
+			height: 5px;
+			border-right: 2px solid #cb4ca0;
+			border-bottom: 2px solid #cb4ca0;
+			position: absolute;
+			top: 40%;
+			right: 20px;
+			transform: rotate(45deg);
+			transition: .3s;
+		}
+
+		&_half {
+			width: 48%;
+		}
+
+		&_active {
+			background: #fafafa;
+			box-shadow: 0 4px 25px 0 rgba(0,0,0,.25);
+
+			&::before {
+				top: 45%;
+				transform: rotate(-135deg);
+			}
+
+			& .select__options {
+				top: calc(100% + 10px);
+				opacity: 1;
+				visibility: visible;
+				z-index: 1;
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__text {
+		font: 18px/20px $main-font-medium;
+	}
+
+	&__options {
+		width: 100%;
+		max-height: 195px;
+		background: #fff;
+		border-radius: 8px;
+		box-shadow: 0 0 14px 0 rgba(0,0,0,.1);
+		overflow: hidden;
+		position: absolute;
+		top: calc(100% + 20px);
+		left: 0;
+		opacity: 0;
+		transition: .3s;
+		visibility: hidden;
+		overflow: hidden;
+		
+
+		&:hover {
+			overflow-y: scroll;
+			&::-webkit-scrollbar-track {
+				background-color: #F5F5F5;
+			}
+	
+			&::-webkit-scrollbar {
+				width: 3px;
+				background-color: #F5F5F5;
+			}
+	
+			&::-webkit-scrollbar-thumb {
+				background-color: #bdbdbd;
+			}
+		}
+
+		&-item {
+			padding: 10px;
+			text-align: center;
+			
+			cursor: pointer;
+	
+			&:hover {
+				background: linear-gradient(to left,#4fe8a0,#2ee2de);
+	
+				& .choice-select__text {
+					color: #fff;
+					transition: .3s;
+				}
+			}
+		}
+	
+		&-text {
+			display: block;
+			font: 18px/20px $main-font-medium;
+			text-align: center;
+		}
+	}
+}

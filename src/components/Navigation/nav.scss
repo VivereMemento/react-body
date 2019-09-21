@@ -1,0 +1,41 @@
+@import '../../style/_misc/vars';
+@import '../../style/_misc/mixins';
+
+.nav {
+	display: flex;
+	align-items: center;
+	
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		padding: 0 15px;
+		border-right: 1px solid $main-fonts-color;
+
+		&:last-child {
+			padding-right: 0;
+			border-right: none;
+		}
+
+		@include small-phones {
+			padding: 0 5px;
+		}
+
+	}
+	
+	&__link {
+		font-family: $main-font-medium;
+		color: $main-fonts-color;
+		text-decoration: none;
+		transition: .3s;
+		
+		&:hover {
+			color: $menu-link-hover;
+		}
+		
+		&_selected {
+			color: $menu-link-hover;
+		}
+	}
+}

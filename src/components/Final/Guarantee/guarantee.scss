@@ -1,0 +1,59 @@
+@import '../../../style/_misc/vars';
+@import '../../../style/_misc/mixins';
+
+.guarantee {
+	margin-top: 50px;
+	
+	&__inner {
+		padding: 30px;
+		background: #fff;
+		border: 10px solid #2ee19b;
+		border-radius: 15px;
+		position: relative;
+	}
+
+	&__title {
+		margin-bottom: 50px;
+		font: 36px/38px $main-font-bold;
+		color: $accent;
+		text-transform: uppercase;
+		text-align: center;
+
+		@include phones {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		font-size: 22px;
+		color: #828282;
+	}
+
+	&__link-wrap {
+		margin-bottom: 30px;
+	}
+
+	&__link {
+		margin-left: 5px;
+		color: #bdbdbd;
+
+		@include tablets {
+			display: block;
+		}
+	}
+
+	&__sign {
+		font: 22px/24px $main-font-bold;
+	}
+
+	&__badge {
+		position: absolute;
+		bottom: -50px;
+		right: 30px;
+
+		@include phones {
+			bottom: -70px;
+		}
+	}
+}

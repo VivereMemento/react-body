@@ -1,0 +1,47 @@
+<svg class="icon icon-bmi" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" id="svg8" version="1.1" viewBox="0 0 260.45584 130.22792" height="130.22792mm" width="260.45584mm">
+							<g transform="translate(59.168391,-56.629823)" id="layer1">
+								<g transform="matrix(0.26458333,0,0,0.26458333,-72.291724,15.936907)" id="g3782">
+									<g id="bg">
+										<g id="arc">
+											<g id="g3746">
+												<linearGradient id="SVGID_1_C" gradientUnits="userSpaceOnUse" x1="948.88898" y1="317.65771" x2="72.945702" y2="678.40973" gradientTransform="matrix(-1,0,0,1,1093.5981,0)">
+													<stop offset="0" style="stop-color:#23EB87" id="stop3721"></stop>
+													<stop offset="5.511403e-02" style="stop-color:#33EC86" id="stop3723"></stop>
+													<stop offset="0.163" style="stop-color:#5DEE85" id="stop3725"></stop>
+													<stop offset="0.3132" style="stop-color:#A1F182" id="stop3727"></stop>
+													<stop offset="0.4985" style="stop-color:#FEF67E" id="stop3729"></stop>
+													<stop offset="0.5" style="stop-color:#FFF67E" id="stop3731"></stop>
+													<stop offset="0.5535" style="stop-color:#FCEC78" id="stop3733"></stop>
+													<stop offset="0.6434" style="stop-color:#F3D266" id="stop3735"></stop>
+													<stop offset="0.7586" style="stop-color:#E4A849" id="stop3737"></stop>
+													<stop offset="0.8933" style="stop-color:#D06D22" id="stop3739"></stop>
+													<stop offset="1" style="stop-color:#BF3A00" id="stop3741"></stop>
+												</linearGradient>
+												<path style="fill:url(#SVGID_1_C)" class="st0" d="m 49.6,646 h 73.5 c 0,-230.9 187.8,-418.7 418.7,-418.7 230.9,0 418.7,187.8 418.7,418.7 H 1034 C 1034,374.6 813.2,153.8 541.8,153.8 270.4,153.8 49.6,374.6 49.6,646 Z" id="path3744"></path>
+											</g>
+										</g>
+									</g>
+								</g>
+								<style type="text/css" id="style3699">
+									.st1 {
+										fill: #FFFFFF;
+									}
+
+									.st2 {
+										fill: #D1169A;
+									}
+								</style>
+								<style type="text/css" id="style3718">
+									.st0 {
+										fill: url(#SVGID_1_C);
+									}
+
+									.st1 {
+										fill: #FFFFFF;
+									}
+
+									.st2 {
+										fill: #D1169A;
+									}
+								</style>
+						</g></svg>

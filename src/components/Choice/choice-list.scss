@@ -1,0 +1,51 @@
+@import '../../style/_misc/vars';
+
+.choice-list {
+	width: 100%;
+
+	&__item {
+		margin-bottom: 10px;
+		text-align: center;
+		background: #fff;
+		border-radius: 8px;
+		box-shadow: 0 0 14px 0 rgba(0,0,0,.1);
+		cursor: pointer;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			background: linear-gradient(to left,#4fe8a0,#2ee2de);
+
+			& .choice-list__text {
+				color: #fff;
+				transition: .3s;
+			}
+		}
+
+		&_chosen {
+			background: linear-gradient(to left,#4fe8a0,#2ee2de);
+
+			& .choice-list__text {
+				color: #fff;
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 10px;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	&__text {
+		font: 18px/20px $main-font-medium;
+	}
+
+	&__measure {
+		@extend .choice-list__text;
+		margin-left: 10px;
+	}
+}

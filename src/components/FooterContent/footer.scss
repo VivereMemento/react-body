@@ -1,0 +1,12 @@
+@import '../../style//_misc/mixins';
+.footer {
+	
+	&__content {
+		padding: 40px 0;
+
+		@include phones {
+			padding: 0 30px;
+			padding-top: 10px;
+		}
+	}
+}

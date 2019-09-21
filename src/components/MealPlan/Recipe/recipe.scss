@@ -1,0 +1,224 @@
+@import '../../../style/_misc/vars';
+@import '../../../style/_misc/mixins';
+
+.recipe {
+    max-width: 722px;
+    max-height: 100vh;
+    padding: 30px 0 60px;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow-y: auto;
+
+    @include phones {
+      overflow: hidden;
+      max-height: auto;
+      padding: 0px 0 10px;
+      border-radius: 0;
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(233, 30, 98, 0.4);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(85, 85, 85, 0.4);
+    }
+  
+  &__title {
+    padding: 0 100px 30px 36px;
+    font: 24px/29px $main-font-medium;
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__inner-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    padding: 10px 50px 10px 150px;
+    box-shadow: inset -250px 0px 86px -72px rgb(255, 255, 255);
+    
+    @include phones {
+      bottom: 0;
+      right: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 10px 0;
+      box-shadow: none;
+      height: auto;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      box-shadow: inset 0px -250px 86px -72px rgb(255, 255, 255);
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-end;
+    height: 100%;
+
+    @include phones {
+      height: auto;
+      flex-wrap: nowrap;
+      justify-content: center;
+      
+    }
+  }
+
+  &__data-wrap {
+    width: 100%;
+    text-align: center;
+
+    @include phones {
+      min-width: 120px;
+      padding: 10px 20px 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 36px;
+
+      @include phones {
+        margin-bottom: 0;
+        margin-right: 40px;
+      }
+    }
+  }
+
+  &__data-img {
+    display: block;
+    margin: 0 auto 6px;
+    width: 43px;
+    height: auto;
+  }
+
+  &__data-text {
+    width: 100%;
+    display: block;
+    font: 24px/29px $main-font-medium;
+  }
+
+  &__values {
+    display: flex;
+    justify-content: center;
+    font: 18px/22px $main-font-regular;
+  }
+
+  &__value {
+    height: 100%;
+    display: block;
+    text-transform: capitalize;
+    font: 18px/22px $main-font-medium;
+    padding: 7px 20px;
+    margin-bottom: 32px;
+
+    &:not(:last-child) {
+      border-right: 2px solid rgb(199, 199, 199);
+    }
+
+    &_thin {
+      text-transform: none;
+      font-family: $main-font-regular;
+    }
+  }
+
+  &__ingredients {
+    display: flex;
+    padding: 0 30px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+
+  &__ingredients-wrap {
+    flex-basis: 50%;
+    min-width: 320px;
+    text-align: left;
+  }
+
+  &__ingredients-title {
+    display: block;
+    margin-bottom: 8px;
+    font: 16px/20px $main-font-medium;
+    
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background-image: url('./recipe1.png');
+    }
+
+    &_img:before {
+      background-image: url('./recipe2.png');
+    }
+  }
+
+  &__ingredients-item {
+    font: 16px/20px $main-font-regular;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__preparation {
+    padding: 0 30px;
+  }
+
+  &__preparation-title {
+    display: block;
+    margin-bottom: 8px;
+    font: 16px/20px $main-font-medium;
+    text-transform: capitalize;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      background-image: url('./recipe3.png');
+    }
+  }
+
+  &__preparation-item {
+    font-size: 16px;
+    line-height: 22px;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

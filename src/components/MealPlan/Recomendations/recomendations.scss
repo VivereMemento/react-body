@@ -1,0 +1,93 @@
+@import '../../../style/_misc/vars';
+@import '../../../style/_misc/mixins';
+
+.recomendations {
+    padding-left: 50px;
+    font: 16px/24px $main-font-regular;
+
+    @include phones {
+        padding-left: 0;
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        text-align: center;
+        font: 32px/39px $main-font-medium;
+    }
+
+    &__text {
+        font-family: $main-font-medium;
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 28%);
+        grid-template-rows: repeat(2, 50%);
+        grid-column-gap: 8%;
+        grid-row-gap: 20px;
+
+        @include phones {
+            display: block;
+        }
+    }
+
+    &__item {
+        color: $fonts-color;
+
+        &:not(:last-child) {
+            @include phones {
+                margin-bottom: 20px;
+            }
+        }
+
+        & > span {
+            display: block;
+
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 30px;
+            background-repeat: no-repeat;
+        }
+
+        &:first-child {
+            &:before {
+                background-image: url('./recomend1.svg');
+            }
+        }
+        &:nth-child(2) {
+            &:before {
+                background-image: url('./recomend2.svg');
+            }
+        }
+        &:nth-child(3) {
+            &:before {
+                background-image: url('./recomend3.svg');
+            }
+        }
+        &:nth-child(4) {
+            &:before {
+                background-image: url('./recomend4.svg');
+            }
+        }
+        &:nth-child(5) {
+            &:before {
+                background-image: url('./recomend5.svg');
+            }
+        }
+        &:last-child {
+            &:before {
+                background-image: url('./recomend6.svg');
+            }
+        }
+    }
+}

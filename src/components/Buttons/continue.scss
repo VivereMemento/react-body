@@ -1,0 +1,60 @@
+@import '../../style/_misc/mixins';
+@import '../../style/_misc/vars';
+
+@include pulseAnimation(woman-pulse, 10px, 20px, $womanColor);
+@include pulseAnimation(woman-pulse-small, 5px, 10px, $womanColor);
+
+.continue {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 20px;
+	padding: 15px;
+	text-decoration: none;
+	background-size: 200%;
+	background-image: linear-gradient(to right, #934399, #f4409a, #934399 );
+	border: none;
+	border-radius: 50px;
+	box-shadow: 0 0 30px 0 rgba(235,87,87,.6);
+	cursor: pointer;
+	transition: .6s;
+	outline: none;
+	pointer-events: none;
+
+	&:hover {
+
+		background-position: right;
+
+		& .continue__text::after {
+			left: 5px;
+		}
+	}
+
+	&_valid {
+		pointer-events: all;
+	}
+
+	&__text {
+		display: flex;
+		align-items: center;
+		color: #fff;
+		text-transform: uppercase;
+		transition: .3s;
+
+		&_arrow {
+			&:after {
+				display: block;
+				content: '';
+				width: 8px;
+				height: 8px;
+				border-right: 1px solid white;
+				border-bottom: 1px solid white;
+				transform: rotate(-45deg);
+				position: relative;
+				top: -1px;
+				left: 15px;
+				transition: .3s;
+			}
+		}
+	}
+}

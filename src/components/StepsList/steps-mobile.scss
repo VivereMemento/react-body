@@ -1,0 +1,31 @@
+.swiper-btn-prev,
+.swiper-btn-next {
+	position: absolute;
+	bottom: 50%;
+	transform: translateY(50%) rotate(0deg);
+	width: 15px;
+	height: 15px;
+	border: none;
+	background-image: url('./icons/arrow-bottom.svg');
+	background-color: transparent;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	filter: contrast(0) opacity(0.5);
+
+	&:hover, &:active {
+		filter: contrast(100) hue-rotate(308deg);
+	}
+}
+
+.swiper-btn-prev {
+	right: 100%;
+	padding-right: 60px;
+	transform: translateY(50%) rotate(90deg);
+}
+
+.swiper-btn-next {
+	left: 100%;
+	padding-left: 60px;
+	transform: translateY(50%) rotate(-90deg);
+}

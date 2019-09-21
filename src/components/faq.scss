@@ -1,0 +1,17 @@
+@import '../style/_misc/vars';
+@import '../style/_misc/mixins';
+
+.faq {
+	display: flex;
+	justify-content: center;
+	
+	&__inner {
+		width: 50%;
+		min-width: 750px;
+
+		@include tablets {
+			width: 100%;
+			min-width: unset;
+		}
+	}
+}

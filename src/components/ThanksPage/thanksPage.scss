@@ -1,0 +1,36 @@
+@import '../../style/_misc/vars';
+@import '../../style/_misc/mixins';
+
+*, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.thanks-page {
+    margin: 0 auto;
+    max-width: 768px;
+    text-align: center;
+    font-family: $main-font-medium;
+    color: #3c444c;
+    font-size: 18px;
+
+    @include tablets {
+        max-width: 100%;
+    }
+
+    &__title-wrap {
+        margin-bottom: 22px;
+        padding: 0 40px;    
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    &__subtitle {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

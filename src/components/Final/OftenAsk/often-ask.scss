@@ -1,0 +1,147 @@
+@import '../../../style/_misc/vars';
+@import '../../../style/_misc/mixins';
+
+.often-ask {
+
+	&__inner {
+		display: flex;
+		justify-content: center;
+	}
+
+
+	&__list-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 60%;
+		padding: 20px;
+		background: #fff;
+		border-radius: 15px;
+		box-shadow: 0 0 14px 0 rgba(0,0,0,.1);
+		position: relative;
+
+		@include tablets {
+			width: 100%;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			width: 100%;
+			height: 10%;
+			border-radius: 15px;
+			box-shadow: inset 0px -26px 20px white;
+			position: absolute;
+			bottom: 0;
+		}
+	}
+
+	&__list {
+		max-height: 300px;
+		overflow: hidden;
+		transition: all 1s ease-out 0s;
+	}
+
+	&__list.often-ask__list_full {
+		max-height: 380px;
+	}
+
+	&__item {
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__user,
+	&__bodyfit {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__user {
+		justify-content: flex-end;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		max-width: 60%;
+		margin: 0 5px;
+		padding: 20px;
+		font-size: 18px;
+		background: #feeae6;
+		border-radius: 15px;
+		position: relative;
+
+		@include small-phones {
+			max-width: 80%;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			width: 15px;
+			height: 15px;
+			border: none;
+			border-bottom: 3px solid #feeae6;
+			border-radius: 50%;
+			position: absolute;
+			left: 98%;
+			bottom: 0;
+			transform: rotate(50deg)
+		}
+
+		&_bg-green {
+			background: #64ffda;
+
+			&::after {
+				border-bottom: 3px solid #64ffda;
+				right: 98%;
+				left: unset;
+				transform: rotate(-50deg)
+			}
+		}
+	}
+
+	&__img-wrap {
+		width: 60px;
+		height: 60px;
+
+		@include small-phones {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&__btn {
+		width: 30px;
+		height: 30px;
+		background: white;
+		border: 2px solid $accent;
+		border-radius: 50%;
+		position: absolute;
+		bottom: -15px;
+		z-index: 1;
+		cursor: pointer;
+
+		&::before {
+			display: block;
+			content: '';
+			width: 30%;
+			height: 30%;
+			border-right: 2px solid $accent;
+			border-bottom: 2px solid $accent;
+			@include absolute-center;
+			top: -2px;
+			transform: rotate(45deg)
+		}
+	}
+
+	&__btn.often-ask__btn_close {
+		&::before {
+			transform: rotate(225deg);
+			top: 2px;
+		}
+	}
+}

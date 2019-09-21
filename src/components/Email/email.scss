@@ -1,0 +1,127 @@
+@import '../../style/_misc/vars';
+@import '../../style/_misc/mixins';
+
+.email {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 68px;
+	margin-bottom: 40px;
+
+	@include small-phones {
+		padding: 40px 10px;
+	}
+
+	&_bordered {
+		border: 3px solid #3fe6bf;
+		border-radius: 30px;
+	}
+
+	&_bg-white {
+		 background-color: #fff;
+		 border-radius: 10px;
+	}
+
+	&_no-pading {
+		padding: 0;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		font: 19px/28px $main-font-medium;
+		color: #3c444c;
+
+		&_small {
+			font: 16px/18px $main-font-medium;
+		}
+	}
+
+	&__form {
+		width: 80%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		&_wider {
+			width: 100%;
+		}
+
+		@include phones {
+			width: 80%;
+		}
+
+		@include small-phones {
+			width: 100%;
+		}
+	}
+
+	&__input-wrap {
+		width: 100%;
+		margin-bottom: 50px;
+		border-radius: 10px;
+		box-shadow: 0 0 14px 0 rgba(0,0,0,.1);
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 12px 20px;
+		border: solid 3px #f2c94c;
+		border-radius: 10px;
+		outline: none;
+
+		&-wrong {
+			border: solid 3px red;
+		}
+
+		&_thin-border {
+			padding: 15px 20px;
+			border: solid 1px #858585;
+			border-radius: 8px;
+		}
+
+		@include phones {
+			padding: 14px 20px;
+		}
+
+		&::placeholder {
+			text-align: center;
+			color: #dadada;
+		}
+	}
+
+	&__btn {
+		width: 94%;
+		font: 24px $main-font-medium;
+		cursor: pointer;
+
+		&_valid {
+			pointer-events: all;
+		}
+
+		@include phones {
+			padding: 14px 20px;
+		}
+	}
+
+	&__close-btn {
+		display: none;
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		width: 16px;
+		height: 16px;
+		background-color: transparent;
+		background-image: url(./cross.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: none;
+		cursor: pointer;
+
+		&_show {
+			display: block;
+		}
+	}
+}

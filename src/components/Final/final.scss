@@ -1,0 +1,80 @@
+@import '../../style/_misc/vars';
+@import '../../style/_misc/mixins';
+
+.final {
+	color: #3c444c;
+
+	&__summary {
+		margin-top: calc(90px + 25px);
+		margin-bottom: 25px;
+		
+		&-inner {
+			display: flex;
+			justify-content: space-between;
+			padding: 30px 70px;
+			background: #fff;
+			border-radius: 15px;
+			box-shadow: 0 0 14px 0 rgba(0,0,0,.1);
+
+			@include tablets {
+				flex-wrap: wrap;
+				justify-content: center;
+				text-align: center;
+			}
+		}
+
+		&-title {
+			display: flex;
+			align-items: center;
+			font: 32px/34px $main-font-medium;
+
+			@include tablets {
+				width: 100%;
+				justify-content: center;
+				margin-bottom: 15px;
+			}
+		}
+
+		&-measuer {
+			display: flex;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			margin-right: 13px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		&-svg {
+			width: 36px;
+			height: 36px;
+			margin-right: 10px;
+			fill: #bebebe;
+		}
+
+		&-text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font: 28px/30px $main-font-semibold;
+
+			& span {
+				font: 14px/16px $main-font-light;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		font-size: 32px;
+		text-align: center;
+
+		&_uppercase {
+			text-transform: uppercase;
+		}
+	}
+}

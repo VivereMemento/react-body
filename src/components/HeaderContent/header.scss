@@ -1,0 +1,16 @@
+@import "../../style/_misc/_vars";
+@import "../../style/_misc/mixins";
+
+.header {
+	
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0;
+
+		@include phones {
+			padding: 10px 0;
+		}
+	}
+}

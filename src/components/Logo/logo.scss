@@ -1,0 +1,15 @@
+@import '../../style/_misc/vars';
+@import '../../style/_misc/mixins';
+
+.logo {
+	width: 130px;
+	height: 45px;
+
+	&__img {
+		height: 100%;
+	}
+
+	@include small-phones {
+		width: 80px;
+	}
+}
