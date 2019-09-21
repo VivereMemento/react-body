@@ -10,19 +10,16 @@ import mealPlanReducer from './reducers/mealPlan';
 import idGenerator from './middlewares/idGenerator';
 import rewritingEatingType from './middlewares/rewritingEatingType';
 
-const reduxTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
-
 const store = createStore(
     combineReducers({
         app,
         language,
         // gender,
         choices,
-        
         final,
         // mealPlanReducer
     }),
-    composeWithDevTools(applyMiddleware(rewritingEatingType))
+    composeWithDevTools(applyMiddleware())
 );
 
 export default store;
