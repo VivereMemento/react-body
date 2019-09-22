@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { useReduxState } from '../../../store/redux-hooks';
-import { getLanguageState } from '../../../store/reducers/language';
+import { useReduxState } from '../../store/redux-hooks';
+import { getLanguageState } from '../../store/reducers/language';
 import './recipe.scss';
 import mealImg from './meal-rec.png';
 import flameImg from'./flame3.svg';

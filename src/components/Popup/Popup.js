@@ -4,7 +4,7 @@ import { useReduxState } from '../../store/redux-hooks';
 import { getLanguageState } from '../../store/reducers/language';
 import './popup.scss';
 import './cross.svg';
-import Recipe from '../MealPlan/Recipe/Recipe';
+import Recipe from '../Recipe/Recipe';
 import { useClickOutsideOfComponent } from '../helpers';
 
 const SHOW_POPUP = 'SHOW::POPUP';

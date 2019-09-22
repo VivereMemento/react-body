@@ -1,6 +1,6 @@
 import React from 'react';
 import './contactUs.scss';
-import PageLayout from '../PageLayout/PageLayout';
+import PageLayout from '../../components/PageLayout/PageLayout';
 import { useReduxState } from '../../store/redux-hooks';
 import { getLanguageState } from '../../store/reducers/language';
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Recipe from '../Recipe/Recipe';
+import Recipe from '../../../components/Recipe/Recipe';
 import ClassNames from 'classnames';
 
 const MealPlanItem = ({ data, chosenMeal,handleSetChosenMeal}) => {

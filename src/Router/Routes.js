@@ -3,12 +3,12 @@ import { Switch, Route } from 'react-router-dom';
 import StepsRoutes from './StepsRoutes';
 import { BASE_ROUTER_NAME } from '../constants';
 import Faq from '../pages/Faq/Faq';
-import Final from '../../components/Final/Final';
-import MealPlan from '../../components/MealPlan/MealPlan';
-import ContactUs from '../components/ContactUs/ContactUs';
-import ThanksPage from '../../components/ThanksPage/ThanksPage';
-import ConfirmEmail from '../../components/ConfirmEmail/ConfirmEmail';
-import PaymentPage from '../../components/PaymentPage/PaymentPage';
+import Final from '../pages/Final/Final';
+import MealPlan from '../pages/MealPlan/MealPlan';
+import ContactUs from '../pages/ContactUs/ContactUs';
+import ThanksPage from '../pages/ThanksPage/ThanksPage';
+import ConfirmEmail from '../pages/ConfirmEmail/ConfirmEmail';
+import PaymentPage from '../pages/PaymentPage/PaymentPage';
 
 const Routes = props => {
 

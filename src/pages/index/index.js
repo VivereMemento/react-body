@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css';
 import '../../style/app.scss';
-import Router from '../Router/Router';
+import Router from '../../Router/Router';
 import { Provider } from '../../store/redux-hooks';
 import store from '../../store/store';
 

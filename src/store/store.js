@@ -7,8 +7,6 @@ import gender from './reducers/gender';
 import choices from './reducers/choices';
 import final from './reducers/final';
 import mealPlanReducer from './reducers/mealPlan';
-import idGenerator from './middlewares/idGenerator';
-import rewritingEatingType from './middlewares/rewritingEatingType';
 
 const store = createStore(
     combineReducers({
