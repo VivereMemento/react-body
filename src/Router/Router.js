@@ -15,7 +15,6 @@ import { useReduxAction } from '../store/redux-hooks';
 import { api, useDataApi } from '../store/api';
 
 import data from '../store/data';
-const token = '';
 const ONE_HOUR = 3600000;
 const isOneHourPassed = isTimePassed(ONE_HOUR);
 
@@ -25,7 +24,7 @@ const Router = () => {
 	const [quizeSteps, setUrlForQuizeSteps, setParamsForQuizeSteps] = api.getQuizeSteps({});
 	const [images, setUrlForImages, setParamsForImages] = api.getImages({});
 	const [enums, setUrlForEnumes, setParamsForEnumes] = api.getEnumes([]);
-	const [productItems, setUrlForProductItems, setParamsForProductItems] = api.getEnumes([]);
+	const [productItems, setUrlForProductItems, setParamsForProductItems] = api.getProductItems([]);
 
 	const isError = [
 		authRequest.isError,
